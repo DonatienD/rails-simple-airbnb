@@ -1,0 +1,16 @@
+<h1>All our flats (<%= @flats.length %>)</h1>
+
+<br>
+
+<div class="card-deck">
+  <% @flats.each do |flat| %>
+
+    <div class="card border-dark mb-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to flat.name, flat_path(flat) %></h5>
+        <p class="card-text"><%= flat.description %></p>
+      </div>
+      <div class="card-footer bg-light">Footer</div>
+    </div>
+  <% end %>
+</div>
